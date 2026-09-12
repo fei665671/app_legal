@@ -8,6 +8,7 @@ Privacy policies and legal pages for our apps (GitHub Pages). One folder per pro
 
 - Site: https://fei665671.github.io/app_legal/ZmanNow-Legal/
 - Connect privacy URL: https://fei665671.github.io/app_legal/ZmanNow-Legal/privacy.html
+- **Connect support URL:** https://fei665671.github.io/app_legal/ZmanNow-Legal/support.html
 
 Files in `ZmanNow-Legal/`.
 

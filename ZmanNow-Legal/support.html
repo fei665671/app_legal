@@ -3,14 +3,16 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Support — Zman Now</title>
+<title>Zman Now — Support</title>
+<meta name="description" content="Technical support for Zman Now. Contact us about zmanim, minhag, notifications, widgets, and Apple Watch."/>
 <style>
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 20px 18px 48px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  padding: 32px 20px 48px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.55;
   color: #1a1a1a;
@@ -20,56 +22,144 @@ body {
   body { color: #f2f2f2; background: #0c1522; }
   a { color: #c4a35a; }
   h1 { color: #e8dcc8; }
+  .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08); }
+  h2 { color: #c4a35a; }
+  .lang a[aria-current="true"] { background: rgba(196,163,90,0.22); color: #c4a35a; }
 }
-h1 { font-size: 1.55rem; margin: 0 0 8px; color: #122a4a; }
-.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 22px; }
-.langs { font-size: 0.92rem; margin: 0 0 18px; }
-p, li { margin: 0.45em 0; }
-ul { padding-left: 1.2em; }
+.wrap { max-width: 560px; margin: 0 auto; }
+.lang {
+  font-size: 0.92rem;
+  margin: 0 0 18px;
+}
+.lang a {
+  color: #1f4b8a;
+  text-decoration: none;
+  padding: 4px 2px;
+}
+.lang a[aria-current="true"] {
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 8px;
+  color: #122a4a;
+}
+.sub { color: #6b7280; margin: 0 0 24px; }
+.card {
+  padding: 18px;
+  margin: 0 0 14px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(18,42,74,0.08);
+}
+h2 {
+  font-size: 1.05rem;
+  margin: 0 0 8px;
+  color: #1f4b8a;
+}
+p { margin: 0.4em 0; }
+ul { margin: 0.4em 0; padding-left: 1.2em; }
 a { color: #1f4b8a; }
+.links { margin-top: 12px; font-size: 0.95rem; }
+.links a { margin-right: 14px; }
 .panel[hidden] { display: none !important; }
+.foot { margin-top: 28px; font-size: 0.9rem; color: #6b7280; }
 </style>
 </head>
 <body>
-<p class="langs">
-  <a href="#en" id="link-en">English</a>
-  ·
-  <a href="#he" id="link-he" dir="rtl">עברית</a>
-</p>
+<div class="wrap">
+  <p class="lang">
+    <a href="#en" id="link-en" aria-current="true">English</a>
+    ·
+    <a href="#he" id="link-he" dir="rtl">עברית</a>
+  </p>
 
-<section id="panel-en" class="panel">
-  <h1>Support</h1>
-  <p class="meta">Zman Now · Contact: <a href="mailto:luolin0231@gmail.com?subject=Zman%20Now%20Feedback">luolin0231@gmail.com</a></p>
-  <p>Need help with zmanim, minhag settings, notifications, widgets, or Apple Watch?</p>
-  <ul>
-    <li>Email us at <a href="mailto:luolin0231@gmail.com?subject=Zman%20Now%20Feedback">luolin0231@gmail.com</a></li>
-    <li>In the app: More → FAQ &amp; Feedback → Email Us</li>
-  </ul>
-  <p>Please include your iOS version and a short description of the issue.</p>
-</section>
+  <section id="panel-en" class="panel">
+    <h1>Zman Now Support</h1>
+    <p class="sub">Help and contact for the Zman Now iOS app.</p>
 
-<section id="panel-he" class="panel" hidden dir="rtl">
-  <h1>תמיכה</h1>
-  <p class="meta">Zman Now · יצירת קשר: <a href="mailto:luolin0231@gmail.com?subject=Zman%20Now%20Feedback">luolin0231@gmail.com</a></p>
-  <p>צריך עזרה עם זמנים, הגדרות מנהג, התראות, ווידג׳טים או Apple Watch?</p>
-  <ul>
-    <li>שלח אימייל ל־<a href="mailto:luolin0231@gmail.com?subject=Zman%20Now%20Feedback">luolin0231@gmail.com</a></li>
-    <li>ביישום: עוד → שאלות נפוצות ומשוב → שלח אימייל</li>
-  </ul>
-  <p>נא לציין את גרסת iOS ותיאור קצר של הבעיה.</p>
-</section>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>Email us anytime:</p>
+      <p><a href="mailto:luolin0231@gmail.com?subject=Zman%20Now%20Support">luolin0231@gmail.com</a></p>
+      <p>We usually reply within 1–3 business days.</p>
+      <p>In the app: <strong>More → FAQ &amp; Feedback → Email Us</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h2>Common topics</h2>
+      <ul>
+        <li><strong>Times differ from another app or a synagogue sheet</strong> — check your minhag, candle-lighting minutes, and nightfall opinion; use Time adjustment if needed. Open <em>Why times differ</em> in the app.</li>
+        <li><strong>No reminders</strong> — allow Notifications in iOS Settings, then enable them in More → Notifications.</li>
+        <li><strong>Widgets / Live Activity</strong> — add Small or Medium from the Home Screen; enable Live Activity under Notifications.</li>
+        <li><strong>Apple Watch</strong> — open Zman Now on iPhone first so times sync; configure the watch face complication on the Watch.</li>
+        <li><strong>Direction / compass</strong> — allow location on the device; hold level and away from magnets; calibrate if accuracy is low.</li>
+        <li><strong>Language</strong> — More → Language (English, Hebrew, or System).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Privacy &amp; Terms</h2>
+      <p class="links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="panel-he" class="panel" hidden dir="rtl">
+    <h1>תמיכה — Zman Now</h1>
+    <p class="sub">עזרה ויצירת קשר עבור יישום Zman Now ב־iOS.</p>
+
+    <div class="card">
+      <h2>יצירת קשר</h2>
+      <p>שלחו לנו אימייל בכל עת:</p>
+      <p><a href="mailto:luolin0231@gmail.com?subject=Zman%20Now%20Support">luolin0231@gmail.com</a></p>
+      <p>בדרך כלל נשיב תוך 1–3 ימי עסקים.</p>
+      <p>ביישום: <strong>עוד → שאלות נפוצות ומשוב → שלח אימייל</strong>.</p>
+    </div>
+
+    <div class="card">
+      <h2>נושאים נפוצים</h2>
+      <ul>
+        <li><strong>הזמנים שונים מאפליקציה אחרת או מלוח בית הכנסת</strong> — בדקו מנהג, דקות הדלקת נרות ושיטת צאת הכוכבים; השתמשו ב״התאמת זמן״ במידת הצורך. פתחו ביישום את ״למה הזמנים שונים״.</li>
+        <li><strong>אין תזכורות</strong> — אפשרו התראות בהגדרות iOS, ואז בהגדרות היישום: עוד → התראות.</li>
+        <li><strong>ווידג׳טים / פעילות חיה</strong> — הוסיפו ממסך הבית; הפעילו פעילות חיה תחת התראות.</li>
+        <li><strong>Apple Watch</strong> — פתחו קודם את Zman Now באייפון לסנכרון; הגדירו complication בפני השעון.</li>
+        <li><strong>כיוון / מצפן</strong> — אפשרו מיקום; החזיקו ישר והרחק ממגנטים; כיילו אם הדיוק נמוך.</li>
+        <li><strong>שפה</strong> — עוד → שפה (אנגלית, עברית או מערכת).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>פרטיות ותנאים</h2>
+      <p class="links">
+        <a href="privacy-he.html">מדיניות פרטיות</a>
+        <a href="terms-he.html">תנאי שימוש</a>
+      </p>
+    </div>
+  </section>
+
+  <p class="foot">© 2026 筱雨薇信息技术咨询服务部</p>
+</div>
 
 <script>
 (function () {
   function show(lang) {
     var en = document.getElementById("panel-en");
     var he = document.getElementById("panel-he");
+    var linkEn = document.getElementById("link-en");
+    var linkHe = document.getElementById("link-he");
     if (!en || !he) return;
     var isHe = lang === "he";
     en.hidden = isHe;
     he.hidden = !isHe;
     document.documentElement.lang = isHe ? "he" : "en";
     document.documentElement.dir = isHe ? "rtl" : "ltr";
+    if (linkEn) linkEn.setAttribute("aria-current", isHe ? "false" : "true");
+    if (linkHe) linkHe.setAttribute("aria-current", isHe ? "true" : "false");
   }
   function fromHash() {
     show((location.hash || "#en").replace("#", "") === "he" ? "he" : "en");
