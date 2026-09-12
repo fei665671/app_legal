@@ -20,10 +20,11 @@
 | 用途 | URL |
 |------|-----|
 | 站点首页 | https://fei665671.github.io/app_legal/SalatNow-Legal/ |
-| 技术支持 | https://fei665671.github.io/app_legal/SalatNow-Legal/support.html |
-| 隐私政策 | https://fei665671.github.io/app_legal/SalatNow-Legal/privacy.html |
+| **App Store Connect → 技术支持网址** | https://fei665671.github.io/app_legal/SalatNow-Legal/support.html |
+| App Store Connect → 隐私政策 | https://fei665671.github.io/app_legal/SalatNow-Legal/privacy.html |
+| 使用条款 | https://fei665671.github.io/app_legal/SalatNow-Legal/terms.html |
 
-文件目录：`SalatNow-Legal/`。
+文件目录：`SalatNow-Legal/`（`support` / `privacy` / `terms` 均支持 English · 简体中文 · العربية 页内切换）。
 
 ### PhoneDrive / 手机U盘
 

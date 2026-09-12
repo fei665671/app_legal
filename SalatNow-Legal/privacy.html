@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Privacy Policy</title>
+<title>Privacy Policy — Salat Now</title>
 <style>
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 20px 18px 48px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Arabic", sans-serif;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Noto Sans Arabic", sans-serif;
   font-size: 16px;
   line-height: 1.55;
   color: #1a1a1a;
@@ -20,21 +20,75 @@ body {
   body { color: #f2f2f2; background: #0f1f1a; }
   a { color: #d4af77; }
   h1, h2 { color: #e8dcc8; }
+  .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08); }
+  .lang button[aria-pressed="true"] { background: #e8dcc8; color: #0f1f1a; }
+  .note { background: rgba(212,175,119,0.14); }
+  header { border-color: rgba(255,255,255,0.08); }
 }
-h1 {
-  font-size: 1.55rem;
-  margin: 0 0 8px;
-  color: #143d32;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f7f5f1;
+  border-bottom: 1px solid rgba(20,61,50,0.1);
 }
-.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 22px; }
-h2 {
-  font-size: 1.1rem;
-  margin: 1.4em 0 0.45em;
-  color: #1f6b52;
+@media (prefers-color-scheme: dark) {
+  header { background: #0f1f1a; }
 }
+.wrap { max-width: 640px; margin: 0 auto; padding: 20px 18px 48px; }
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.brand { font-weight: 650; color: #143d32; letter-spacing: -0.02em; }
+@media (prefers-color-scheme: dark) { .brand { color: #e8dcc8; } }
+.lang {
+  display: flex;
+  border: 1px solid rgba(20,61,50,0.18);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (prefers-color-scheme: dark) {
+  .lang { border-color: rgba(232,220,200,0.25); }
+}
+.lang button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.lang button[aria-pressed="true"] {
+  background: #143d32;
+  color: #f7f5f1;
+}
+h1 { font-size: 1.55rem; margin: 8px 0 8px; color: #143d32; }
+h2 { font-size: 1.1rem; margin: 1.4em 0 0.45em; color: #1f6b52; }
+@media (prefers-color-scheme: dark) { h2 { color: #d4af77; } }
+.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 18px; }
+.sub, .lead { color: #6b7280; margin: 0 0 20px; }
 p, li { margin: 0.45em 0; }
 ul { padding-left: 1.2em; }
 a { color: #1f6b52; }
+.panel { display: none; }
+.panel.is-on { display: block; }
+.card {
+  padding: 18px;
+  margin: 0 0 14px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(20,61,50,0.08);
+}
+.card h2 { margin-top: 0; }
+.links a { margin-right: 14px; }
 .note {
   margin-top: 1.5em;
   padding: 12px 14px;
@@ -42,11 +96,26 @@ a { color: #1f6b52; }
   background: rgba(31,107,82,0.08);
   font-size: 0.95rem;
 }
+.foot { margin-top: 28px; font-size: 0.9rem; color: #6b7280; }
+.langs-static { font-size: 0.92rem; margin: 0 0 18px; }
+.langs-static a[aria-current="true"] { font-weight: 600; text-decoration: none; color: inherit; }
 </style>
 </head>
 <body>
+  <header>
+    <div class="wrap">
+      <div class="brand">Salat Now</div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-en" aria-pressed="true">English</button>
+        <button type="button" id="btn-zh" aria-pressed="false">中文</button>
+        <button type="button" id="btn-ar" aria-pressed="false" dir="rtl">العربية</button>
+      </div>
+    </div>
+  </header>
+<main class="wrap">
+  <article id="panel-en" class="panel is-on" lang="en">
 <h1>Privacy Policy</h1>
-<p class="meta">Salat Now · Last updated: July 22, 2026 · Contact: luolin0231@gmail.com</p>
+<p class="meta">Salat Now · Last updated: September 12, 2026 · Contact: luolin0231@gmail.com</p>
 
 <p>This Privacy Policy explains how <strong>Salat Now</strong> (“the App”, “we”) handles information when you use our iOS application. We built Salat Now to work primarily <strong>offline on your device</strong>. We do not operate a Salat Now account system and we do not run an app backend that receives your prayer or location data.</p>
 
@@ -106,6 +175,158 @@ a { color: #1f6b52; }
 <h2>11. Contact</h2>
 <p>Questions about privacy: <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a>.</p>
 <div class="note">Summary: Salat Now calculates prayer times and Qibla on your iPhone. We do not run a cloud service that stores your location or prayer data.</div>
+  </article>
+  <article id="panel-zh" class="panel" lang="zh-Hans">
+<h1>隐私政策</h1>
+<p class="meta">Salat Now · 最近更新：2026年9月12日 · 联系：luolin0231@gmail.com</p>
 
+<p>本隐私政策说明您在使用 iOS 应用 <strong>Salat Now</strong>（下称「本应用」「我们」）时，相关信息如何被处理。Salat Now 以<strong>设备端离线工作</strong>为主，不提供 Salat Now 账号体系，也没有用于接收您礼拜或定位数据的自有服务器后台。</p>
+
+<h2>1. 我们是谁</h2>
+<p>Salat Now 是一款面向 iPhone 的礼拜时间与朝向（Qibla）工具。隐私相关问题请发送邮件至 <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a>。</p>
+
+<h2>2. 在您设备上处理的信息</h2>
+<p>为提供功能，本应用可能在<strong>您的 iPhone 本地</strong>处理以下信息：</p>
+<ul>
+<li><strong>位置信息</strong> — GPS 或您手动选择的城市，用于计算礼拜时间与朝向。需要时会申请「使用期间」定位权限。</li>
+<li><strong>罗盘方向</strong> — 仅在朝向页面用于显示方向。</li>
+<li><strong>您设置的偏好</strong> — 如计算方法、教法学派、通知、语言、旅行模式、收藏城市、实时活动开关等。</li>
+<li><strong>小组件 / 实时活动数据</strong> — 通过设备上的 App Group 与小组件扩展共享，以便主屏幕、锁屏与实时活动展示下一次礼拜等信息。</li>
+</ul>
+<p>我们<strong>不要求</strong>注册账号，也不收集身份证、通讯录、相册或麦克风内容。</p>
+
+<h2>3. 我们不会做的事</h2>
+<ul>
+<li>不会把您的位置、礼拜时间或设置上传到 Salat Now 自有服务器（本应用没有此类后台）。</li>
+<li>不会出售个人信息。</li>
+<li>不会在应用内投放第三方广告。</li>
+<li>不会接入第三方分析 SDK 对您进行画像。</li>
+</ul>
+
+<h2>4. Apple 与系统服务</h2>
+<p>部分处理由 Apple / iOS 完成，例如：系统定位与通知、App Store 付费下载、WidgetKit 与 ActivityKit。相关数据处理适用 Apple 隐私政策及您的系统设置。</p>
+
+<h2>5. 开源计算库</h2>
+<p>礼拜时间与朝向角使用开源库 Adhan Swift 在设备本地计算，不会因此向我们发送数据。</p>
+
+<h2>6. 权限说明</h2>
+<ul>
+<li><strong>定位</strong> — 可选；用于自动 GPS 计时与朝向。也可手动选城。</li>
+<li><strong>通知</strong> — 可选；用于您开启的礼拜提醒。</li>
+<li><strong>实时活动</strong> — 可选；可在通知设置中开启锁屏 / 灵动岛倒计时。</li>
+</ul>
+<p>您可随时在系统设置中关闭权限；部分功能将受限。</p>
+
+<h2>7. 保存期限</h2>
+<p>数据保存在您的设备上，直至您在应用内修改或删除应用。卸载后，本地应用数据通常随之删除（Apple 侧的购买记录仍由 Apple 按其规则保留）。</p>
+
+<h2>8. 儿童</h2>
+<p>本应用为通用工具，并非专门面向 13 岁以下儿童。我们不会通过 Salat Now 服务器故意收集儿童个人信息。</p>
+
+<h2>9. 政策更新</h2>
+<p>功能或实践变化时，我们可能更新本政策，并更新文首日期。继续使用即表示您了解更新后的政策。</p>
+
+<h2>10. 联系我们</h2>
+<p>隐私问题请联系：<a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a>。</p>
+<div class="note">简要说明：Salat Now 在您的 iPhone 上计算礼拜时间与朝向；我们没有用于保存您位置或礼拜数据的云端服务。</div>
+  </article>
+  <article id="panel-ar" class="panel" lang="ar" dir="rtl">
+<h1>سياسة الخصوصية</h1>
+<p class="meta">Salat Now · آخر تحديث: 12 سبتمبر 2026 · التواصل: luolin0231@gmail.com</p>
+
+<p>توضح سياسة الخصوصية هذه كيفية تعامل تطبيق <strong>Salat Now</strong> («التطبيق»، «نحن»)مع المعلومات عند استخدامكم لتطبيق iOS. صُمّم Salat Now ليعمل أساسًا <strong>دون اتصال على جهازكم</strong>. لا نقدّم نظام حسابات لـ Salat Now، ولا نشغّل خادمًا خلفيًا يستقبل بيانات الصلاة أو الموقع الخاصة بكم.</p>
+
+<h2>1. من نحن</h2>
+<p>Salat Now أداة لأوقات الصلاة واتجاه القبلة على iPhone. للاستفسارات المتعلقة بالخصوصية راسلوا <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a>.</p>
+
+<h2>2. المعلومات التي تُعالَج على جهازكم</h2>
+<p>قد يعالج التطبيق المعلومات التالية <strong>محليًا على iPhone</strong> لتقديم الميزات:</p>
+<ul>
+<li><strong>الموقع</strong> — عبر GPS أو مدينة تختارونها يدويًا، لحساب أوقات الصلاة واتجاه القبلة.</li>
+<li><strong>اتجاه البوصلة</strong> — يُستخدم فقط في شاشة القبلة.</li>
+<li><strong>الإعدادات التي تختارونها</strong> — مثل طريقة الحساب والمذهب والإشعارات واللغة ووضع السفر والمدن المحفوظة والنشاط المباشر.</li>
+<li><strong>بيانات الودجات / النشاط المباشر</strong> — تُشارك عبر مجموعة التطبيقات على الجهاز لعرض المعلومات على الشاشة الرئيسية وشاشة القفل.</li>
+</ul>
+<p>لا نطلب إنشاء حساب، ولا نجمع جهات الاتصال أو الصور أو الميكروفون.</p>
+
+<h2>3. ما لا نقوم به</h2>
+<ul>
+<li>لا نرفع موقعكم أو أوقات الصلاة أو الإعدادات إلى خادم خاص بـ Salat Now.</li>
+<li>لا نبيع المعلومات الشخصية.</li>
+<li>لا نعرض إعلانات من أطراف ثالثة داخل التطبيق.</li>
+<li>لا نستخدم حزم تحليلات من أطراف ثالثة لتتبعكم داخل Salat Now.</li>
+</ul>
+
+<h2>4. خدمات Apple والنظام</h2>
+<p>تتم بعض المعالجات عبر Apple ضمن iOS (الموقع، الإشعارات، شراء التطبيق المدفوع، الودجات، ActivityKit). تخضع لسياسة خصوصية Apple وإعدادات جهازكم.</p>
+
+<h2>5. مكتبة الحساب مفتوحة المصدر</h2>
+<p>تُحسب أوقات الصلاة واتجاه القبلة محليًا باستخدام مكتبة Adhan Swift، دون إرسال بيانات إلينا.</p>
+
+<h2>6. الأذونات</h2>
+<ul>
+<li><strong>الموقع</strong> — اختياري؛ لـ GPS والقبلة. يمكن اختيار مدينة يدويًا.</li>
+<li><strong>الإشعارات</strong> — اختياري؛ لتذكيرات الصلاة.</li>
+<li><strong>النشاط المباشر</strong> — اختياري؛ يمكن تفعيله من إعدادات الإشعارات لعدّ تنازلي على شاشة القفل / Dynamic Island.</li>
+</ul>
+
+<h2>7. مدة الاحتفاظ</h2>
+<p>تبقى البيانات على جهازكم حتى تعدّلوها أو تحذفوا التطبيق. سجلات الشراء لدى Apple تخضع لقواعد Apple.</p>
+
+<h2>8. الأطفال</h2>
+<p>التطبيق أداة عامة وليس موجّهًا لمن هم دون 13 عامًا. لا نجمع عن قصد معلومات شخصية للأطفال عبر خادم Salat Now.</p>
+
+<h2>9. التحديثات</h2>
+<p>قد نحدّث هذه السياسة عند تغيّر الميزات أو الممارسات، مع تحديث تاريخ أعلى الصفحة.</p>
+
+<h2>10. التواصل</h2>
+<p><a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+<div class="note">ملخص: يحسب Salat Now أوقات الصلاة والقبلة على iPhone. لا نشغّل خدمة سحابية لتخزين موقعكم أو بيانات الصلاة.</div>
+  </article>
+</main>
+<script>
+
+(function () {
+  var langs = ["en", "zh", "ar"];
+  var panels = {};
+  var buttons = {};
+  langs.forEach(function (l) {
+    panels[l] = document.getElementById("panel-" + l);
+    buttons[l] = document.getElementById("btn-" + l);
+  });
+  function setLang(lang) {
+    if (langs.indexOf(lang) < 0) lang = "en";
+    langs.forEach(function (l) {
+      if (panels[l]) panels[l].classList.toggle("is-on", l === lang);
+      if (buttons[l]) buttons[l].setAttribute("aria-pressed", String(l === lang));
+    });
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    try { localStorage.setItem("sn-lang", lang); } catch (e) {}
+    if (history.replaceState) history.replaceState(null, "", "#" + lang);
+  }
+  langs.forEach(function (l) {
+    if (buttons[l]) buttons[l].addEventListener("click", function () { setLang(l); });
+  });
+  var start = "en";
+  try {
+    var hash = (location.hash || "").replace("#", "");
+    if (hash === "zh-Hans") hash = "zh";
+    if (langs.indexOf(hash) >= 0) start = hash;
+    else {
+      var stored = localStorage.getItem("sn-lang");
+      if (langs.indexOf(stored) >= 0) start = stored;
+      else {
+        var nav = (navigator.language || "").toLowerCase();
+        if (nav.indexOf("zh") === 0) start = "zh";
+        else if (nav.indexOf("ar") === 0) start = "ar";
+      }
+    }
+  } catch (e) {}
+  window.__setSnLang = setLang;
+  setLang(start);
+})();
+
+</script>
 </body>
 </html>

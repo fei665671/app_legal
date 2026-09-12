@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<title>Terms of Use</title>
+<title>Terms of Use — Salat Now</title>
 <style>
 :root { color-scheme: light dark; }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  padding: 20px 18px 48px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans Arabic", sans-serif;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Noto Sans Arabic", sans-serif;
   font-size: 16px;
   line-height: 1.55;
   color: #1a1a1a;
@@ -20,21 +20,75 @@ body {
   body { color: #f2f2f2; background: #0f1f1a; }
   a { color: #d4af77; }
   h1, h2 { color: #e8dcc8; }
+  .card { background: rgba(255,255,255,0.06); border-color: rgba(255,255,255,0.08); }
+  .lang button[aria-pressed="true"] { background: #e8dcc8; color: #0f1f1a; }
+  .note { background: rgba(212,175,119,0.14); }
+  header { border-color: rgba(255,255,255,0.08); }
 }
-h1 {
-  font-size: 1.55rem;
-  margin: 0 0 8px;
-  color: #143d32;
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background: #f7f5f1;
+  border-bottom: 1px solid rgba(20,61,50,0.1);
 }
-.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 22px; }
-h2 {
-  font-size: 1.1rem;
-  margin: 1.4em 0 0.45em;
-  color: #1f6b52;
+@media (prefers-color-scheme: dark) {
+  header { background: #0f1f1a; }
 }
+.wrap { max-width: 640px; margin: 0 auto; padding: 20px 18px 48px; }
+header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.brand { font-weight: 650; color: #143d32; letter-spacing: -0.02em; }
+@media (prefers-color-scheme: dark) { .brand { color: #e8dcc8; } }
+.lang {
+  display: flex;
+  border: 1px solid rgba(20,61,50,0.18);
+  border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+@media (prefers-color-scheme: dark) {
+  .lang { border-color: rgba(232,220,200,0.25); }
+}
+.lang button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #6b7280;
+  padding: 6px 10px;
+  font: inherit;
+  font-size: 0.88rem;
+  cursor: pointer;
+}
+.lang button[aria-pressed="true"] {
+  background: #143d32;
+  color: #f7f5f1;
+}
+h1 { font-size: 1.55rem; margin: 8px 0 8px; color: #143d32; }
+h2 { font-size: 1.1rem; margin: 1.4em 0 0.45em; color: #1f6b52; }
+@media (prefers-color-scheme: dark) { h2 { color: #d4af77; } }
+.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 18px; }
+.sub, .lead { color: #6b7280; margin: 0 0 20px; }
 p, li { margin: 0.45em 0; }
 ul { padding-left: 1.2em; }
 a { color: #1f6b52; }
+.panel { display: none; }
+.panel.is-on { display: block; }
+.card {
+  padding: 18px;
+  margin: 0 0 14px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(20,61,50,0.08);
+}
+.card h2 { margin-top: 0; }
+.links a { margin-right: 14px; }
 .note {
   margin-top: 1.5em;
   padding: 12px 14px;
@@ -42,11 +96,26 @@ a { color: #1f6b52; }
   background: rgba(31,107,82,0.08);
   font-size: 0.95rem;
 }
+.foot { margin-top: 28px; font-size: 0.9rem; color: #6b7280; }
+.langs-static { font-size: 0.92rem; margin: 0 0 18px; }
+.langs-static a[aria-current="true"] { font-weight: 600; text-decoration: none; color: inherit; }
 </style>
 </head>
 <body>
+  <header>
+    <div class="wrap">
+      <div class="brand">Salat Now</div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-en" aria-pressed="true">English</button>
+        <button type="button" id="btn-zh" aria-pressed="false">中文</button>
+        <button type="button" id="btn-ar" aria-pressed="false" dir="rtl">العربية</button>
+      </div>
+    </div>
+  </header>
+<main class="wrap">
+  <article id="panel-en" class="panel is-on" lang="en">
 <h1>Terms of Use</h1>
-<p class="meta">Salat Now · Last updated: July 22, 2026 · Contact: luolin0231@gmail.com</p>
+<p class="meta">Salat Now · Last updated: September 12, 2026 · Contact: luolin0231@gmail.com</p>
 
 <p>These Terms of Use (“Terms”) govern your use of the iOS app <strong>Salat Now</strong>. By downloading or using the App, you agree to these Terms. If you do not agree, do not use the App.</p>
 
@@ -92,6 +161,149 @@ a { color: #1f6b52; }
 <h2>11. Contact</h2>
 <p><a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
 <div class="note">These Terms are a practical user agreement for an offline utility app. They are not a substitute for professional legal advice in every jurisdiction.</div>
+  </article>
+  <article id="panel-zh" class="panel" lang="zh-Hans">
+<h1>使用条款</h1>
+<p class="meta">Salat Now · 最近更新：2026年9月12日 · 联系：luolin0231@gmail.com</p>
 
+<p>本《使用条款》（下称「本条款」）适用于 iOS 应用 <strong>Salat Now</strong>。下载或使用本应用即表示您同意本条款；如不同意，请勿使用。</p>
+
+<h2>1. 服务说明</h2>
+<p>Salat Now 提供礼拜时间估算、朝向、提醒、小组件等相关工具。计算在您的设备上完成（包括使用 Adhan Swift 库），并基于您提供的位置与设置。</p>
+<p><strong>重要：</strong>不同计算方法、教法学派、高纬度规则与设备传感器可能导致时间差异。Salat Now 是辅助工具，<strong>不是</strong>宗教裁定机构。如有疑问，请以当地清真寺或可信学者意见为准。</p>
+
+<h2>2. 授权</h2>
+<p>我们授予您个人的、非独占、不可转让、可撤销的许可，供您在自己拥有或控制的 Apple 设备上，依 App Store 规则与本条款使用 Salat Now。</p>
+
+<h2>3. 付费下载</h2>
+<p>Salat Now 在 App Store 以<strong>付费下载</strong>方式提供。购买价格即包含应用的完整功能，无需另行内购解锁。</p>
+<ul>
+<li>价格由 App Store 在购买前以当地货币展示。</li>
+<li>App Store 购买的计费与退款由 Apple 按其政策处理。</li>
+</ul>
+
+<h2>4. 合理使用</h2>
+<p>您不得滥用本应用，不得在法律禁止的情况下进行逆向工程，不得干扰 Apple 服务，不得将本应用用于违法目的。</p>
+
+<h2>5. 准确性与设备限制</h2>
+<ul>
+<li>礼拜时间取决于计算方法与位置质量。</li>
+<li>朝向精度取决于 GPS/罗盘校准与硬件；金属壳与干扰可能影响精度。</li>
+<li>通知与实时活动取决于系统权限与省电设置。</li>
+</ul>
+
+<h2>6. 知识产权</h2>
+<p>Salat Now 名称、品牌与原创内容受适用法律保护。第三方库（含 Adhan Swift）适用其各自许可。</p>
+
+<h2>7. 免责声明</h2>
+<p>在法律允许的最大范围内，本应用按「现状」提供，不附带任何明示或默示保证，包括适于特定宗教或法律用途的保证。</p>
+
+<h2>8. 责任限制</h2>
+<p>在法律允许的最大范围内，我们对因依赖礼拜时间或朝向、错过提醒、由 Apple 处理的购买问题、或无法使用本应用而导致的间接、附带、特殊或惩罚性损害不承担责任。</p>
+
+<h2>9. 隐私</h2>
+<p>使用本应用亦请参阅应用内《隐私政策》。</p>
+
+<h2>10. 变更与终止</h2>
+<p>我们可能更新应用与本条款；继续使用视为接受变更。您可随时删除应用以停止使用。</p>
+
+<h2>11. 联系</h2>
+<p><a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+<div class="note">本条款面向离线工具类应用的一般使用约定，不能替代特定法域下的专业法律意见。</div>
+  </article>
+  <article id="panel-ar" class="panel" lang="ar" dir="rtl">
+<h1>شروط الاستخدام</h1>
+<p class="meta">Salat Now · آخر تحديث: 12 سبتمبر 2026 · التواصل: luolin0231@gmail.com</p>
+
+<p>تحكم شروط الاستخدام هذه («الشروط») استخدامكم لتطبيق iOS <strong>Salat Now</strong>. بتحميل التطبيق أو استخدامه فإنكم توافقون على هذه الشروط. إن لم توافقوا فلا تستخدموا التطبيق.</p>
+
+<h2>1. الخدمة</h2>
+<p>يوفّر Salat Now أوقات صلاة تقريبية واتجاه القبلة وتذكيرات وودجات وأدوات ذات صلة. تُجرى الحسابات على جهازكم (بما في ذلك عبر مكتبة Adhan Swift) وفق الموقع والإعدادات التي تقدّمونها.</p>
+<p><strong>مهم:</strong> قد تختلف الأوقات حسب طريقة الحساب والمذهب وقواعد خطوط العرض العالية وأجهزة الاستشعار. Salat Now أداة مساعدة و<strong>ليست</strong> جهة إفتاء. عند الشك اتبعوا مسجدكم المحلي أو عالمًا موثوقًا.</p>
+
+<h2>2. الترخيص</h2>
+<p>نمنحكم ترخيصًا شخصيًا غير حصري وغير قابل للتحويل وقابل للإلغاء لاستخدام Salat Now على أجهزة Apple التي تملكونها أو تتحكمون بها، وفق شروط App Store وهذه الشروط.</p>
+
+<h2>3. تطبيق مدفوع</h2>
+<p>يُوزَّع Salat Now كـ<strong>تحميل مدفوع</strong> على App Store. يمنح سعر الشراء الوصول إلى كامل ميزات التطبيق، دون فتح إضافي داخل التطبيق.</p>
+<ul>
+<li>يُعرض السعر بعملة متجركم قبل الشراء.</li>
+<li>الفوترة والاسترداد لشراء التطبيق لدى Apple وفق سياساتها.</li>
+</ul>
+
+<h2>4. الاستخدام المقبول</h2>
+<p>تتعهدون بعدم إساءة استخدام التطبيق أو عكس هندسته حيث يمنع القانون ذلك أو التدخل في خدمات Apple أو الاستخدام غير القانوني.</p>
+
+<h2>5. الدقة وحدود الجهاز</h2>
+<ul>
+<li>تعتمد أوقات الصلاة على الإعدادات وجودة الموقع.</li>
+<li>تعتمد دقة القبلة على GPS/البوصلة والأجهزة.</li>
+<li>تعتمد الإشعارات والنشاط المباشر على أذونات iOS وإعدادات الطاقة.</li>
+</ul>
+
+<h2>6. الملكية الفكرية</h2>
+<p>اسم Salat Now وعلامته ومحتواه الأصلي محميان. تظل مكتبات الطرف الثالث خاضعة لتراخيصها.</p>
+
+<h2>7. إخلاء المسؤولية</h2>
+<p>يُقدَّم التطبيق «كما هو» و«حسب التوافر» دون ضمانات من أي نوع إلى أقصى حد يسمح به القانون.</p>
+
+<h2>8. تحديد المسؤولية</h2>
+<p>إلى أقصى حد يسمح به القانون، لسنا مسؤولين عن الأضرار غير المباشرة أو العرضية أو الخاصة أو عن الخسائر الناشئة عن الاعتماد على أوقات الصلاة أو اتجاه القبلة أو فوات التذكيرات أو مشكلات الشراء لدى Apple.</p>
+
+<h2>9. الخصوصية</h2>
+<p>يخضع استخدامكم أيضًا لسياسة الخصوصية داخل التطبيق.</p>
+
+<h2>10. التغيير والإنهاء</h2>
+<p>قد نحدّث التطبيق وهذه الشروط. استمرار الاستخدام بعد التحديث يعني القبول. يمكنكم التوقف بحذف التطبيق.</p>
+
+<h2>11. التواصل</h2>
+<p><a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+<div class="note">هذه الشروط اتفاق استخدام عملي لتطبيق أدوات دون اتصال، وليست بديلاً عن استشارة قانونية متخصصة في كل ولاية قضائية.</div>
+  </article>
+</main>
+<script>
+
+(function () {
+  var langs = ["en", "zh", "ar"];
+  var panels = {};
+  var buttons = {};
+  langs.forEach(function (l) {
+    panels[l] = document.getElementById("panel-" + l);
+    buttons[l] = document.getElementById("btn-" + l);
+  });
+  function setLang(lang) {
+    if (langs.indexOf(lang) < 0) lang = "en";
+    langs.forEach(function (l) {
+      if (panels[l]) panels[l].classList.toggle("is-on", l === lang);
+      if (buttons[l]) buttons[l].setAttribute("aria-pressed", String(l === lang));
+    });
+    document.documentElement.lang = lang === "zh" ? "zh-Hans" : lang;
+    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+    try { localStorage.setItem("sn-lang", lang); } catch (e) {}
+    if (history.replaceState) history.replaceState(null, "", "#" + lang);
+  }
+  langs.forEach(function (l) {
+    if (buttons[l]) buttons[l].addEventListener("click", function () { setLang(l); });
+  });
+  var start = "en";
+  try {
+    var hash = (location.hash || "").replace("#", "");
+    if (hash === "zh-Hans") hash = "zh";
+    if (langs.indexOf(hash) >= 0) start = hash;
+    else {
+      var stored = localStorage.getItem("sn-lang");
+      if (langs.indexOf(stored) >= 0) start = stored;
+      else {
+        var nav = (navigator.language || "").toLowerCase();
+        if (nav.indexOf("zh") === 0) start = "zh";
+        else if (nav.indexOf("ar") === 0) start = "ar";
+      }
+    }
+  } catch (e) {}
+  window.__setSnLang = setLang;
+  setLang(start);
+})();
+
+</script>
 </body>
 </html>

@@ -1,47 +1,49 @@
-# Salat Now — 法务页面（GitHub Pages）
+# Salat Now — 法务与支持页（GitHub Pages）
 
-本目录对应仓库：`fei665671/salat-now-legal`  
+本目录位于仓库：`fei665671/app_legal`  
 当前模式：**App Store 付费下载**（无内购 / 无 Pro 解锁）。
 
-## App Store Connect 填这个
+页面均支持 **English · 简体中文 · العربية** 页内切换。
+
+## App Store Connect 填这些
+
+技术支持网址：
 
 ```text
-https://fei665671.github.io/salat-now-legal/SalatNow-Legal/privacy.html
+https://fei665671.github.io/app_legal/SalatNow-Legal/support.html
 ```
 
-条款页：
+隐私政策：
 
 ```text
-https://fei665671.github.io/salat-now-legal/SalatNow-Legal/terms.html
+https://fei665671.github.io/app_legal/SalatNow-Legal/privacy.html
+```
+
+使用条款：
+
+```text
+https://fei665671.github.io/app_legal/SalatNow-Legal/terms.html
 ```
 
 首页：
 
 ```text
-https://fei665671.github.io/salat-now-legal/SalatNow-Legal/
+https://fei665671.github.io/app_legal/SalatNow-Legal/
 ```
-
-## 如何发布本次更新
-
-在仓库根目录（桌面 `salat-now-legal`）提交并推送即可，例如用 GitHub Desktop，或：
-
-```bash
-cd ~/Desktop/salat-now-legal
-git add SalatNow-Legal
-git commit -m "Update legal pages for paid App Store build"
-git push
-```
-
-推送后等 1–2 分钟，刷新上面的 `privacy.html` 确认已是「Paid app / 付费下载」版本。
 
 ## 文件说明
 
 | 文件 | 说明 |
 |------|------|
-| `privacy.html` | 英文隐私政策（Connect 主链接） |
-| `terms.html` | 英文使用条款 |
-| `privacy-*.html` / `terms-*.html` | 英 / 中 / 阿 |
-| `index.html` | 语言入口 |
+| `support.html` | 技术支持（页内三语） |
+| `privacy.html` | 隐私政策（页内三语，Connect 主链接） |
+| `terms.html` | 使用条款（页内三语） |
+| `privacy-*.html` / `terms-*.html` | 单语分册（App Bundle + 顶栏切换） |
+| `index.html` | 入口 |
 | `README.md` | 本说明 |
 
-内容与 App 内 `SalatNow/Resources/Legal/` 一致。联系邮箱：`luolin0231@gmail.com`
+内容与 App 内 `SalatNow/Resources/Legal/` 保持同步。联系邮箱：`luolin0231@gmail.com`
+
+## 发布
+
+在仓库根目录提交并推送 `main` 即可（GitHub Pages）。通常 1–2 分钟后生效。
