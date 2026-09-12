@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>隐私政策 — 手机U盘</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px 18px 48px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #f6f5f2;
+}
+@media (prefers-color-scheme: dark) {
+  body { color: #eceae4; background: #0d1a1c; }
+  a { color: #7dcdc4; }
+  h1, h2 { color: #cdeae6; }
+  table { background: #152326; }
+  th, td { border-color: #2a3d40; }
+  .note { background: rgba(125,205,196,0.12); }
+}
+h1 { font-size: 1.55rem; margin: 0 0 8px; color: #0b3d4a; }
+.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 22px; }
+.langs { font-size: 0.92rem; margin: 0 0 18px; }
+h2 { font-size: 1.1rem; margin: 1.4em 0 0.45em; color: #0b6e6e; }
+p, li { margin: 0.45em 0; }
+ul { padding-left: 1.2em; }
+a { color: #0b6e6e; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff; margin: 0.8em 0; }
+th, td { text-align: left; vertical-align: top; border: 1px solid #d8d6d0; padding: 8px 10px; }
+.note {
+  margin-top: 1.5em;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(11,110,110,0.08);
+  font-size: 0.95rem;
+}
+</style>
+</head>
+<body>
+<p class="langs">简体中文 · <a href="privacy.html">English</a></p>
+<h1>隐私政策</h1>
+<p class="meta">手机U盘（PhoneDrive）· iPhone、iPad、Mac · 最后更新：2026 年 8 月 17 日 · 联系：<a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+
+<p>手机U盘（以下简称「本应用」「我们」）是一款在你的设备之间传输、存放和播放文件的工具。<strong>我们不运营云端账号，也不把你的文件或个人信息上传到我们的服务器。</strong>请在使用前阅读本政策。</p>
+
+<h2>1. 我们不向开发者收集数据</h2>
+<p>本应用：</p>
+<ul>
+<li>不要求注册或登录；</li>
+<li>不使用分析、广告或崩溃统计 SDK；</li>
+<li>不做跨 App 追踪（NSPrivacyTracking = false）；</li>
+<li>不把文件、相册、PIN、设备名称或使用记录发送给我们。</li>
+</ul>
+<p>App Store 隐私标签中对应的申报是：<strong>不收集数据</strong>。本政策中的「处理」均发生在<strong>你的设备上</strong>，或发生在你主动连接的<strong>局域网 / USB 链路对端设备上</strong>。</p>
+
+<h2>2. 仅保存在本机的信息</h2>
+<p>下列信息只写在本机系统提供的存储中（例如 App 沙盒、Application Support、UserDefaults），用于让应用正常工作：</p>
+<table>
+<thead><tr><th>信息</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td>自定义设备名称</td><td>在接收界面和局域网页上显示，便于对端识别</td></tr>
+<tr><td>传输 PIN、端口</td><td>局域网 / USB 传输时校验访问</td></tr>
+<tr><td>欢迎页是否完成</td><td>记住是否看过引导</td></tr>
+<tr><td>保险柜开关与本地密码校验值</td><td>判断隐藏文件夹是否已设置、是否允许生物识别</td></tr>
+<tr><td>本机 Bonjour 实例标识</td><td>仅用于局域网发现，不是账号</td></tr>
+<tr><td>文件库索引（文件名、大小、文件夹、是否隐藏等）</td><td>在本机列出和管理你导入或接收的文件</td></tr>
+<tr><td>文件内容本身</td><td>保存在本应用容器内，供你查看、播放、再传出</td></tr>
+</tbody>
+</table>
+<p>卸载本应用后，上述本机数据会随 App 容器一并删除（系统另有备份的除外）。</p>
+
+<h2>3. 系统权限</h2>
+<p>本应用只在你使用相应功能时请求权限，可随时在系统设置中关闭。</p>
+<p><strong>本地网络</strong> — 用于在同一 Wi-Fi 或 USB 网络上发现设备，并在你开启「开始接收」后提供本机网页与文件传输。关闭后，局域网发现和网页互传将无法工作。</p>
+<p><strong>Face ID / 触控 ID</strong>（及设备密码）— 仅用于解锁你设置过的隐藏文件夹。系统在本机完成识别，我们无法读取你的面容、指纹或生物识别模板。</p>
+<p><strong>相册</strong> — 仅在你主动从相册导入照片或视频时使用。导入的是你选中项目的副本，写入本应用文件库；不会在后台扫描整本相册，也不会把相册内容上传到我们的服务器。</p>
+<p><strong>用户选择的文件</strong>（尤其是 Mac）— 发送、导入、下载保存时，通过系统文件选择器 / 保存面板访问你指定的路径。我们不会在未获你选择的情况下读取磁盘上的其他文件。</p>
+
+<h2>4. 文件如何在设备之间传输</h2>
+<p>传输由你发起，路径是同一 Wi-Fi 下的局域网，或 USB 数据线形成的个人热点 / 链路本地网络。</p>
+<p>本应用在接收端开启一个<strong>仅局域网可达的 HTTP 服务</strong>（默认端口 8787，可在设置中修改）。浏览器或 Mac 客户端通过该地址上传或下载。对端需要你在接收界面上显示的 <strong>PIN</strong>。</p>
+<p>请注意：</p>
+<ul>
+<li>文件在链路上以 HTTP 明文传输，<strong>不经过我们的云</strong>，但同一网络中若有人同时知道地址和 PIN，则可能访问当前共享会话中的内容；</li>
+<li>请使用你信任的网络，传输结束后请及时停止接收或刷新 PIN；</li>
+<li>带「访客隔离 / AP 隔离」的 Wi-Fi 可能无法互发现。</li>
+</ul>
+<p>局域网发现可能通过 Bonjour 广播设备名称、服务端口等信息，范围限于当前网络，不会发到公网。网页通道（Android、Windows、未安装本应用的电脑）同样只连到你手机或电脑当时显示的本地地址，不经过我们的服务器。</p>
+
+<h2>5. 隐藏文件夹与生物识别</h2>
+<p>隐藏文件夹用于在本机文件库中收起你标记为隐藏的项目。未解锁时，本机界面以及对端（Mac / 网页）的文件列表都不会露出这些内容。</p>
+<p>这是<strong>本机可见性控制</strong>，<strong>不是文件级加密</strong>：文件仍以普通文件形式存在于本应用容器中。请勿将其理解为「加密保险柜」或端到端加密存储。</p>
+<p>用于解锁的密码校验信息保存在本机。生物识别由 iOS / macOS 系统 API 完成。</p>
+
+<h2>6. 播放与 AirPlay</h2>
+<p>你在本应用内播放的视频、图片均来自本机文件库。若你使用系统 AirPlay 投到电视或其他设备，内容由 Apple 系统传送到<strong>你选择的播放设备</strong>，我们不中转、不存储该流转。</p>
+
+<h2>7. 第三方</h2>
+<p>除 Apple 提供的系统能力（App Store 分发、Face ID / 触控 ID、AirPlay、本地网络等）外，本应用<strong>不含</strong>第三方统计、广告、登录或云存储 SDK。Apple 作为平台运营方，其处理适用 Apple 自己的隐私政策。</p>
+
+<h2>8. 未成年人</h2>
+<p>本应用不以儿童为主要对象，也不故意收集儿童的个人信息。因我们不向开发者收集数据，亦不提供面向儿童的账号。若你是监护人并认为未成年人在设备上保存了不适宜内容，请在本机删除相关文件或卸载应用。</p>
+
+<h2>9. 保留、删除与你的选择</h2>
+<ul>
+<li><strong>本机删除：</strong>在文件库中删除文件或卸载应用。</li>
+<li><strong>停止共享：</strong>在接收界面停止接收，或刷新 PIN。</li>
+<li><strong>权限：</strong>在系统设置中关闭本地网络、相册或 Face ID。</li>
+<li><strong>向我们删除数据：</strong>我们的服务器上没有你的个人数据可删。若你通过邮件向我们发送问询，该邮件本身由邮件服务商按常规存储，处理完毕后我们不会将其用于其他目的。</li>
+</ul>
+
+<h2>10. 安全</h2>
+<p>我们采取与产品形态相符的措施，例如：传输需 PIN、隐藏夹在解锁前不对端可见、文件保留在系统沙盒中。局域网 HTTP 并非针对不可信网络设计的加密通道。请自行判断使用场景，不要在不信任的公共网络上开启接收。</p>
+
+<h2>11. 你的权利</h2>
+<p>在适用的数据保护法律下，你可能享有知情、访问、更正、删除等权利。由于我们不保存可识别你的云端档案，这些权利主要通过你在<strong>本机操作</strong>实现。你仍可通过文末邮箱联系我们。我们不会出售你的个人信息。</p>
+
+<h2>12. 政策更新</h2>
+<p>功能若发生变化（例如增加云同步、账号或分析），我们会更新本政策，并视情况在应用或本页面提示。请以本页「最后更新」日期为准。</p>
+
+<h2>13. 联系我们</h2>
+<p>如对本政策或本应用的隐私做法有疑问，请联系：<a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+<p class="meta">产品：手机U盘 / PhoneDrive · Bundle ID：com.pulsetransfer.app</p>
+<div class="note">摘要：手机U盘把文件留在你的设备上，并在你的局域网或 USB 链路上互传。我们不运营用于存放你文件的云服务。</div>
+</body>
+</html>

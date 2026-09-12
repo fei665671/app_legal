@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support · 技术支持 — PhoneDrive</title>
+  <meta name="description" content="Technical support for PhoneDrive / 手机U盘. Contact us by email for help with file transfer, Mac, iPhone, and local network issues.">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f6f5f2;
+      --fg: #1c1c1a;
+      --muted: #5c5c56;
+      --line: #d8d6d0;
+      --card: #fff;
+      --accent: #0b6e6e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #121211;
+        --fg: #eceae4;
+        --muted: #a8a59c;
+        --line: #2e2e2a;
+        --card: #1c1c1a;
+        --accent: #7dcdc4;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 20px 20px 64px; }
+    header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+    .brand { font-weight: 650; letter-spacing: -0.02em; }
+    .lang {
+      display: flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .lang button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: 6px 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+    .lang button[aria-pressed="true"] {
+      background: var(--fg);
+      color: var(--bg);
+    }
+    h1 { font-size: 1.75rem; line-height: 1.25; margin: 8px 0 8px; }
+    h2 { font-size: 1.15rem; margin: 32px 0 10px; }
+    p, li { color: var(--fg); }
+    .lead { color: var(--muted); margin-top: 0; }
+    ul { padding-left: 1.2em; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); font-size: 0.92rem; }
+    .panel { display: none; }
+    .panel.is-on { display: block; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+    .contact-card {
+      margin: 24px 0;
+      padding: 20px 22px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .contact-card p { margin: 0 0 8px; }
+    .contact-card p:last-child { margin-bottom: 0; }
+    .contact-email {
+      font-size: 1.15rem;
+      font-weight: 650;
+    }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0 0 6px;
+    }
+    .faq-item p { margin: 0; color: var(--muted); }
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="brand">PhoneDrive · 手机U盘</div>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" id="btn-zh" aria-pressed="true">中文</button>
+        <button type="button" id="btn-en" aria-pressed="false">English</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <article id="panel-zh" class="panel is-on" lang="zh-Hans">
+      <h1>技术支持</h1>
+      <p class="meta">产品：手机U盘（PhoneDrive） · 平台：iPhone、iPad、Mac<br>最后更新：2026 年 8 月 18 日</p>
+      <p class="lead">手机U盘帮助你在自己的设备之间快速传输和管理文件。如遇问题、建议或合作咨询，请通过下方邮箱联系我们。我们通常会在 <strong>3 个工作日内</strong> 回复。</p>
+
+      <div class="contact-card">
+        <p>联系邮箱</p>
+        <p class="contact-email"><a href="mailto:luolin0231@gmail.com?subject=%E6%89%8B%E6%9C%BAAU%E7%9B%98%20%E6%8A%80%E6%9C%AF%E6%94%AF%E6%8C%81">luolin0231@gmail.com</a></p>
+        <p class="meta">请在邮件中说明设备型号、系统版本，以及你遇到的问题。如有截图，一并附上会更快定位。</p>
+      </div>
+
+      <h2>常见问题</h2>
+
+      <div class="faq-item">
+        <h3>如何开始传文件？</h3>
+        <p>在 iPhone / iPad 上打开本应用，进入「传输」并点击<strong>开始接收</strong>，记下屏幕上显示的 PIN。在 Mac 客户端填写该 PIN，或通过同一 Wi-Fi 下的浏览器访问手机显示的本地地址。Mac 端可发送文件到手机，或从手机下载到电脑。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Mac 上填哪个 PIN？</h3>
+        <p>请填写<strong>手机接收界面上显示的 PIN</strong>，不是 Mac 系统设置里的密码，也不是 Mac 应用设置里的 PIN。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>数据线极速模式连不上？</h3>
+        <p>请确认 iPhone 与 Mac 已通过 USB 连接，手机保持解锁并开启「开始接收」。若仍无法发现设备，尝试重新插拔数据线、关闭并重新开启接收，或改用同一 Wi-Fi 网络传输。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>提示需要「本地网络」权限？</h3>
+        <p>请在 iPhone「设置 → 隐私与安全性 → 本地网络」中允许本应用。Mac 首次连接时也可能弹出本地网络授权，请选择允许。拒绝该权限将无法在同一网络下发现设备或传输文件。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>隐藏文件夹在 Mac 上看不到？</h3>
+        <p>隐藏文件夹需先在手机上完成保险柜设置并在本机解锁后，Mac 端刷新列表才会显示。这是预期行为，用于保护隐私。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>需要注册账号吗？数据会上传云端吗？</h3>
+        <p>不需要注册。文件保存在你的设备本地，传输走局域网或 USB 链路，<strong>不经过我们的服务器</strong>。详见<a href="privacy.html">隐私政策</a>。</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>传输过程中可以切换 Mac 页面吗？</h3>
+        <p>Mac 应用在发送或下载进行中会提示你留在当前页面，以免传输被中断。完成后可正常切换「发送 / 下载 / 设置」。</p>
+      </div>
+
+      <h2>反馈与故障报告</h2>
+      <p>如遇到崩溃、无法连接、文件损坏或其他异常，请发邮件至 <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a>，并尽量提供：</p>
+      <ul>
+        <li>设备型号与 iOS / macOS 版本</li>
+        <li>问题出现的步骤</li>
+        <li>相关截图或屏幕录制</li>
+        <li>是否使用 USB 数据线或 Wi-Fi</li>
+      </ul>
+
+      <footer>
+        <p class="meta">Bundle ID：<code>com.pulsetransfer.app</code></p>
+        <p class="meta"><a href="privacy.html">隐私政策</a> · PhoneDrive / 手机U盘</p>
+      </footer>
+    </article>
+
+    <article id="panel-en" class="panel" lang="en">
+      <h1>Support</h1>
+      <p class="meta">Product: PhoneDrive (手机U盘) · Platforms: iPhone, iPad, and Mac<br>Last updated: 18 August 2026</p>
+      <p class="lead">PhoneDrive helps you transfer and manage files between your own devices. For questions, bug reports, or feedback, contact us by email below. We usually reply within <strong>3 business days</strong>.</p>
+
+      <div class="contact-card">
+        <p>Contact email</p>
+        <p class="contact-email"><a href="mailto:luolin0231@gmail.com?subject=PhoneDrive%20Support">luolin0231@gmail.com</a></p>
+        <p class="meta">Please include your device model, OS version, and a short description of the issue. Screenshots help us respond faster.</p>
+      </div>
+
+      <h2>Frequently asked questions</h2>
+
+      <div class="faq-item">
+        <h3>How do I start transferring files?</h3>
+        <p>On iPhone or iPad, open the App, go to Transfer, and tap <strong>Start Receiving</strong>. Note the PIN on screen. On Mac, enter that PIN, or use a browser on the same Wi-Fi to open the local address shown on the phone. The Mac app can send files to the phone or download from the phone to your Mac.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Which PIN should I enter on Mac?</h3>
+        <p>Use the <strong>PIN shown on the phone’s receiving screen</strong> — not your Mac login password, and not the PIN in Mac Settings inside the App.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>USB Turbo mode does not connect</h3>
+        <p>Make sure the iPhone is connected by USB cable, unlocked, and still in Start Receiving mode. Try reconnecting the cable, toggling receiving off and on, or fall back to the same Wi-Fi network.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Local Network permission prompt</h3>
+        <p>On iPhone, go to Settings → Privacy &amp; Security → Local Network and allow PhoneDrive. Mac may also ask for local network access on first use — choose Allow. Without it, discovery and transfer on your LAN will not work.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Hidden folders missing on Mac</h3>
+        <p>Hidden folders appear on Mac only after you set up the vault on the phone and unlock it there, then refresh the list on Mac. This is intentional for privacy.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I need an account? Is my data uploaded?</h3>
+        <p>No sign-in is required. Files stay on your devices; transfers use your LAN or USB link and <strong>do not pass through our servers</strong>. See our <a href="privacy.html">Privacy Policy</a>.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I switch Mac tabs during a transfer?</h3>
+        <p>While sending or downloading, the Mac app asks you to stay on the current page so the transfer is not interrupted. You can switch tabs again after it finishes.</p>
+      </div>
+
+      <h2>Bug reports &amp; feedback</h2>
+      <p>If the App crashes, fails to connect, or behaves unexpectedly, email <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a> with:</p>
+      <ul>
+        <li>Device model and iOS / macOS version</li>
+        <li>Steps to reproduce the issue</li>
+        <li>Screenshots or a screen recording if possible</li>
+        <li>Whether you used USB or Wi-Fi</li>
+      </ul>
+
+      <footer>
+        <p class="meta">Bundle ID: <code>com.pulsetransfer.app</code></p>
+        <p class="meta"><a href="privacy.html">Privacy Policy</a> · PhoneDrive / 手机U盘</p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    (function () {
+      var zh = document.getElementById("panel-zh");
+      var en = document.getElementById("panel-en");
+      var btnZh = document.getElementById("btn-zh");
+      var btnEn = document.getElementById("btn-en");
+
+      function setLang(lang) {
+        var isEn = lang === "en";
+        zh.classList.toggle("is-on", !isEn);
+        en.classList.toggle("is-on", isEn);
+        btnZh.setAttribute("aria-pressed", String(!isEn));
+        btnEn.setAttribute("aria-pressed", String(isEn));
+        document.documentElement.lang = isEn ? "en" : "zh-Hans";
+        try { localStorage.setItem("pd-lang", isEn ? "en" : "zh"); } catch (e) {}
+        var hash = isEn ? "en" : "zh";
+        if (history.replaceState) history.replaceState(null, "", "#" + hash);
+      }
+
+      btnZh.addEventListener("click", function () { setLang("zh"); });
+      btnEn.addEventListener("click", function () { setLang("en"); });
+
+      var start = "zh";
+      try {
+        if (location.hash === "#en") start = "en";
+        else if (location.hash === "#zh") start = "zh";
+        else if (localStorage.getItem("pd-lang") === "en") start = "en";
+        else if ((navigator.language || "").toLowerCase().indexOf("zh") !== 0) start = "en";
+      } catch (e) {}
+      setLang(start);
+    })();
+  </script>
+</body>
+</html>

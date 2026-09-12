@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Privacy Policy — PhoneDrive</title>
+<style>
+:root { color-scheme: light dark; }
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  padding: 20px 18px 48px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #f6f5f2;
+}
+@media (prefers-color-scheme: dark) {
+  body { color: #eceae4; background: #0d1a1c; }
+  a { color: #7dcdc4; }
+  h1, h2 { color: #cdeae6; }
+  table { background: #152326; }
+  th, td { border-color: #2a3d40; }
+  .note { background: rgba(125,205,196,0.12); }
+}
+h1 { font-size: 1.55rem; margin: 0 0 8px; color: #0b3d4a; }
+.meta { color: #6b7280; font-size: 0.9rem; margin-bottom: 22px; }
+.langs { font-size: 0.92rem; margin: 0 0 18px; }
+h2 { font-size: 1.1rem; margin: 1.4em 0 0.45em; color: #0b6e6e; }
+p, li { margin: 0.45em 0; }
+ul { padding-left: 1.2em; }
+a { color: #0b6e6e; }
+table { width: 100%; border-collapse: collapse; font-size: 0.95rem; background: #fff; margin: 0.8em 0; }
+th, td { text-align: left; vertical-align: top; border: 1px solid #d8d6d0; padding: 8px 10px; }
+.note {
+  margin-top: 1.5em;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(11,110,110,0.08);
+  font-size: 0.95rem;
+}
+</style>
+</head>
+<body>
+<p class="langs"><a href="privacy-zh-Hans.html">简体中文</a> · English</p>
+<h1>Privacy Policy</h1>
+<p class="meta">PhoneDrive (手机U盘) · iPhone, iPad, and Mac · Last updated: August 17, 2026 · Contact: <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+
+<p>PhoneDrive (“the App”, “we”) lets you transfer, store, and play files between your own devices. <strong>We do not run cloud accounts, and we do not upload your files or personal information to our servers.</strong> Please read this policy before you use the App.</p>
+
+<h2>1. We do not collect data on our servers</h2>
+<p>The App:</p>
+<ul>
+<li>does not require sign-in or an account;</li>
+<li>does not include analytics, advertising, or crash-reporting SDKs;</li>
+<li>does not track you across apps (NSPrivacyTracking = false);</li>
+<li>does not send your files, photos, PIN, device name, or usage history to us.</li>
+</ul>
+<p>The App Store privacy nutrition label for this product is <strong>Data Not Collected</strong>. Anything described below is processed <strong>on your device</strong>, or on a device you deliberately connect over <strong>your local network or USB link</strong>.</p>
+
+<h2>2. Information kept only on your device</h2>
+<p>The following stays in on-device storage provided by the system (App sandbox, Application Support, UserDefaults) so the App can function:</p>
+<table>
+<thead><tr><th>Information</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td>Display name you choose</td><td>Shown on the receiving screen and local web page so the other device can recognise you</td></tr>
+<tr><td>Transfer PIN and port</td><td>Access check for LAN / USB transfers</td></tr>
+<tr><td>Onboarding completed</td><td>Remember whether you have seen the welcome flow</td></tr>
+<tr><td>Vault flags and a local password verifier</td><td>Know whether hidden folders are set up and whether biometrics are allowed</td></tr>
+<tr><td>A local Bonjour instance identifier</td><td>LAN discovery only — not an account</td></tr>
+<tr><td>Library index (file names, sizes, folders, hidden flags, and similar)</td><td>List and manage files you imported or received</td></tr>
+<tr><td>File contents</td><td>Stored in the App container so you can view, play, or send them again</td></tr>
+</tbody>
+</table>
+<p>Uninstalling the App deletes this on-device data with the App container (unless the system has a separate backup).</p>
+
+<h2>3. System permissions</h2>
+<p>The App asks for a permission only when you use the related feature. You can turn each permission off in system settings.</p>
+<p><strong>Local Network</strong> — Used to discover devices on the same Wi-Fi or USB network, and to serve the local web page and file transfer after you tap Start Receiving. If you deny this permission, discovery and browser transfer will not work.</p>
+<p><strong>Face ID / Touch ID</strong> (and the device passcode) — Used only to unlock hidden folders you created. Recognition runs on-device in the operating system. We cannot read your face, fingerprint, or biometric templates.</p>
+<p><strong>Photo Library</strong> — Used only when you choose photos or videos to import. The App copies the items you pick into its library. It does not scan your whole library in the background and does not upload Photos content to our servers.</p>
+<p><strong>User-selected files</strong> (especially on Mac) — Send, import, and download use the system open/save panels for paths you pick. The App does not read other files on disk unless you select them.</p>
+
+<h2>4. How files move between devices</h2>
+<p>Transfers start only when you do so, over the same Wi-Fi LAN, or a USB cable personal hotspot / link-local network.</p>
+<p>The receiving device runs an <strong>HTTP service reachable on the local network only</strong> (default port 8787, configurable in Settings). A browser or the Mac client uploads or downloads through that address. The other side needs the <strong>PIN</strong> shown on the receiving screen.</p>
+<p>Please note:</p>
+<ul>
+<li>Files travel as plain HTTP on that link. They <strong>do not go through our cloud</strong>, but anyone on the same network who has both the address and the PIN could access content in the current share session;</li>
+<li>Use a network you trust, and stop receiving or refresh the PIN when you finish;</li>
+<li>Guest / AP-isolated Wi-Fi often blocks device discovery.</li>
+</ul>
+<p>LAN discovery may advertise your device name and service port via Bonjour on the current network only — not on the public internet. The web channel (Android, Windows, or a computer without the App) connects only to the local address shown on your phone or computer. It does not pass through our servers.</p>
+
+<h2>5. Hidden folders and biometrics</h2>
+<p>Hidden folders tuck items you mark as hidden inside the on-device library. While locked, those items are not shown in the App or in the file list seen by a Mac or browser on the other side.</p>
+<p>This is <strong>on-device visibility control</strong>, <strong>not file encryption</strong>. Files remain ordinary files in the App container. Do not treat this as a cryptographic vault or end-to-end encrypted storage.</p>
+<p>The password verifier for unlock is stored on-device. Biometric unlock uses Apple’s system APIs.</p>
+
+<h2>6. Playback and AirPlay</h2>
+<p>Video and images you play come from the on-device library. If you use system AirPlay to a TV or other device, Apple’s system delivers the stream to <strong>the player you picked</strong>. We do not relay or store that stream.</p>
+
+<h2>7. Third parties</h2>
+<p>Apart from Apple system features (App Store distribution, Face ID / Touch ID, AirPlay, Local Network, and similar), the App <strong>does not include</strong> third-party analytics, ads, sign-in, or cloud-storage SDKs. Apple’s handling of data as a platform provider is covered by Apple’s own privacy policy.</p>
+
+<h2>8. Children</h2>
+<p>The App is not directed at children and does not knowingly collect children’s personal information. Because we do not collect data on our servers, we also do not offer child accounts. If you are a parent or guardian and a minor has stored content on a device, delete those files locally or uninstall the App.</p>
+
+<h2>9. Retention, deletion, and your choices</h2>
+<ul>
+<li><strong>Delete locally:</strong> remove files in the library, or uninstall the App.</li>
+<li><strong>Stop sharing:</strong> stop receiving, or refresh the PIN.</li>
+<li><strong>Permissions:</strong> turn off Local Network, Photos, or Face ID in system settings.</li>
+<li><strong>Deletion requests to us:</strong> we hold no personal data of yours on our servers to delete. If you email us a question, that message is stored by the email provider in the ordinary way; we will not use it for other purposes after we have handled it.</li>
+</ul>
+
+<h2>10. Security</h2>
+<p>We use controls that match this product: a PIN for transfers, hidden folders withheld from peers until unlock, and files kept in the system sandbox. Local HTTP is not an encrypted channel for untrusted networks. Use your judgement, and do not start receiving on a public network you do not trust.</p>
+
+<h2>11. Your rights</h2>
+<p>Where data-protection law applies, you may have rights to be informed, to access, to correct, and to delete. Because we do not keep an identifiable cloud profile, those rights are exercised mainly <strong>on your device</strong>. You can still contact us at the address below. We do not sell your personal information.</p>
+
+<h2>12. Changes</h2>
+<p>If the product changes (for example if we add cloud sync, accounts, or analytics), we will update this policy and, where appropriate, note it in the App or on this page. The “Last updated” date on this page is controlling.</p>
+
+<h2>13. Contact</h2>
+<p>Questions about this policy or the App’s privacy practices: <a href="mailto:luolin0231@gmail.com">luolin0231@gmail.com</a></p>
+<p class="meta">Product: PhoneDrive / 手机U盘 · Bundle ID: com.pulsetransfer.app</p>
+<div class="note">Summary: PhoneDrive keeps files on your devices and moves them over your local network or USB link. We do not run a cloud service that stores your files.</div>
+</body>
+</html>
