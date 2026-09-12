@@ -1,16 +1,38 @@
-# Zman Now — Legal
+# Zman Now — Legal & Support
 
-Privacy Policy, Terms of Use, and Support for **Zman Now**.
+本目录供 **App Store Connect** 与对外链接使用（GitHub Pages），**不必接入 iOS 工程**。
 
-## GitHub Pages URLs
+## App Store Connect 请填
 
-- Site: https://fei665671.github.io/app_legal/ZmanNow-Legal/
-- **Support (App Store Connect Support URL):** https://fei665671.github.io/app_legal/ZmanNow-Legal/support.html
-- Privacy (Connect): https://fei665671.github.io/app_legal/ZmanNow-Legal/privacy.html
-- Terms: https://fei665671.github.io/app_legal/ZmanNow-Legal/terms.html
+**技术支持网址（Support URL）**
 
-## Languages
+```text
+https://fei665671.github.io/app_legal/ZmanNow-Legal/support.html
+```
 
-English and Hebrew. Support / privacy / terms pages include an in-page language switch.
+**隐私政策网址（Privacy Policy URL）**
 
-In-app legal HTML copies live in `ZmanNow/Resources/Legal/` (privacy & terms only).
+```text
+https://fei665671.github.io/app_legal/ZmanNow-Legal/privacy.html
+```
+
+## 全部链接
+
+| 页面 | URL |
+|------|-----|
+| 首页 | https://fei665671.github.io/app_legal/ZmanNow-Legal/ |
+| **技术支持** | https://fei665671.github.io/app_legal/ZmanNow-Legal/support.html |
+| 隐私政策 | https://fei665671.github.io/app_legal/ZmanNow-Legal/privacy.html |
+| 使用条款 | https://fei665671.github.io/app_legal/ZmanNow-Legal/terms.html |
+
+## 文件说明
+
+| 文件 | 说明 |
+|------|------|
+| `support.html` | 技术支持站（联系邮箱、常见问题、隐私/条款入口；英/希切换） |
+| `privacy.html` / `privacy-en.html` / `privacy-he.html` | 隐私政策 |
+| `terms.html` / `terms-en.html` / `terms-he.html` | 使用条款 |
+| `index.html` | 入口页 |
+| `README.md` | 本说明 |
+
+联系邮箱：`luolin0231@gmail.com`

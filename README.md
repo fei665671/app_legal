@@ -1,31 +1,40 @@
 # app_legal
 
-Privacy policies and legal pages for our apps (GitHub Pages). One folder per product.
+各产品的隐私政策、使用条款与**技术支持页**（GitHub Pages）。按产品分目录。
 
 ## Products
 
 ### Zman Now
 
-- Site: https://fei665671.github.io/app_legal/ZmanNow-Legal/
-- Connect privacy URL: https://fei665671.github.io/app_legal/ZmanNow-Legal/privacy.html
-- **Connect support URL:** https://fei665671.github.io/app_legal/ZmanNow-Legal/support.html
+| 用途 | URL |
+|------|-----|
+| 站点首页 | https://fei665671.github.io/app_legal/ZmanNow-Legal/ |
+| **App Store Connect → 技术支持网址** | https://fei665671.github.io/app_legal/ZmanNow-Legal/support.html |
+| App Store Connect → 隐私政策 | https://fei665671.github.io/app_legal/ZmanNow-Legal/privacy.html |
+| 使用条款 | https://fei665671.github.io/app_legal/ZmanNow-Legal/terms.html |
 
-Files in `ZmanNow-Legal/`.
+文件目录：`ZmanNow-Legal/`（含 `support.html`）。
 
 ### Salat Now
 
-- Site: https://fei665671.github.io/app_legal/SalatNow-Legal/
-- Connect privacy URL: https://fei665671.github.io/app_legal/SalatNow-Legal/privacy.html
+| 用途 | URL |
+|------|-----|
+| 站点首页 | https://fei665671.github.io/app_legal/SalatNow-Legal/ |
+| 技术支持 | https://fei665671.github.io/app_legal/SalatNow-Legal/support.html |
+| 隐私政策 | https://fei665671.github.io/app_legal/SalatNow-Legal/privacy.html |
 
-Files in `SalatNow-Legal/`. (Also mirrored historically under `salat-now-legal`.)
+文件目录：`SalatNow-Legal/`。
 
 ### PhoneDrive / 手机U盘
 
-- Site: https://fei665671.github.io/app_legal/PhoneDrive-Legal/
-- Connect privacy URL: https://fei665671.github.io/app_legal/PhoneDrive-Legal/privacy.html
+| 用途 | URL |
+|------|-----|
+| 站点首页 | https://fei665671.github.io/app_legal/PhoneDrive-Legal/ |
+| 技术支持 | https://fei665671.github.io/app_legal/PhoneDrive-Legal/support.html |
+| 隐私政策 | https://fei665671.github.io/app_legal/PhoneDrive-Legal/privacy.html |
 
-Files in `PhoneDrive-Legal/`.
+文件目录：`PhoneDrive-Legal/`。
 
 ## Publishing
 
-Push to `main`. Enable GitHub Pages for this repository (Deploy from branch `main` / root). Pages usually update within a few minutes.
+Push to `main`. Enable GitHub Pages for this repository（Source: Deploy from branch `main` / root）。通常 1–2 分钟后可访问。
